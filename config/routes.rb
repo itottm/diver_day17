@@ -3,6 +3,8 @@ Rails.application.routes.draw do
     get 'preview'
   end
 
+  root 'blogs#index'
+
   get 'draft' => 'blogs#draft'
   get 'deleted' => 'blogs#deleted'
 

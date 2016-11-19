@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  resources :blogs do
+    get 'preview'
+  end
+
+  get 'draft' => 'blogs#draft'
+  get 'deleted' => 'blogs#deleted'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
